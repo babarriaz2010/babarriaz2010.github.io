@@ -6,4 +6,7 @@
 @media(max-width:360px){.hero h1{font-size:36px}.hero .eyebrow{font-size:6px}.hero .button,.outline-button{padding:10px 12px;font-size:10px}.hero-github{font-size:9px}.profile-card{grid-template-columns:90px 1fr}.profile-body{padding:16px 13px}.profile-body p{font-size:9px}.hero-stats .stat strong{font-size:16px}.hero-stats .stat span{font-size:8px}}
 @media(min-width:601px) and (max-width:900px){main.wrap>section:before{inset-inline:-28px}}
 .profile-art img{width:100%;height:100%;object-fit:cover;object-position:center 27%;position:absolute;inset:0}.profile-art:has(img)>span,.profile-art:has(img)>small,.profile-art:has(img)>.profile-ring{display:none}
+/* Paint full-width bands without viewport-sized boxes extending under scrollbars. */
+main.wrap>section:before{inset:0}
+main.wrap>section:nth-of-type(odd):not(.hero):before{box-shadow:0 0 0 100vmax var(--panel);clip-path:inset(0 -100vmax)}
 @media(prefers-reduced-motion:reduce){.profile-card,.principles article,.capability-grid article,.outline-button{transition:none}}
